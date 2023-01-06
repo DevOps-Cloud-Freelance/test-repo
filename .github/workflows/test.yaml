@@ -7,7 +7,7 @@ jobs:
 
 
     steps:
-      - uses: macnev2013/manual-approval@latest
+      - uses: macnev2013/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
           approvers: supraj,SuprajMaripeddi
