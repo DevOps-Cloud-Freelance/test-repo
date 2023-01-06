@@ -7,10 +7,15 @@ jobs:
 
 
     steps:
-      - name: Manual approval
-        uses: actions/manual-approval@v1
+      - uses: macnev2013/manual-approval@latest
         with:
-          approvers: supraj, SuprajMaripeddi
+          secret: ${{ github.TOKEN }}
+          approvers: supraj,SuprajMaripeddi
+          minimum-approvals: 1
+          approval-wait: 600
+          issue-title: 'Manual Approval'
+          issue-body: |
+            "Issue Body"
 #     - uses: trstringer/manual-approval@v1
 #       with:
 #         secret: ${{ github.TOKEN }}
