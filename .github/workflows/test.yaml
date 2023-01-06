@@ -10,7 +10,7 @@ jobs:
     - uses: trstringer/manual-approval@v1
       with:
         secret: ${{ github.TOKEN }}
-        add_approver_team: supraj
+        approvers: supraj
         minimum-approvals: 1
         issue-title: "Deploying v1.3.5 to prod from staging"
         exclude-workflow-initiator-as-approver: false
