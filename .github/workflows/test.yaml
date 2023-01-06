@@ -7,11 +7,15 @@ jobs:
 
 
     steps:
-    - uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: SuprajMaripeddi,DevOps-Cloud-Freelance/supraj
-        minimum-approvals: 1
-        issue-title: "Deploying v1.3.5 to prod from staging"
-        exclude-workflow-initiator-as-approver: false
+      - name: Manual approval
+        uses: actions/manual-approval@v1
+        with:
+          approvers: supraj, SuprajMaripeddi
+#     - uses: trstringer/manual-approval@v1
+#       with:
+#         secret: ${{ github.TOKEN }}
+#         approvers: SuprajMaripeddi,DevOps-Cloud-Freelance/supraj
+#         minimum-approvals: 1
+#         issue-title: "Deploying v1.3.5 to prod from staging"
+#         exclude-workflow-initiator-as-approver: false
       
